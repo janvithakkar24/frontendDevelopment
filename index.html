@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card-content h2 {
+        margin: 0 0 10px;
+        font-size: 1.5em;
+      }
+      .card-content p {
+        margin: 0 0 20px;
+        color: #555;
+      }
+      .author {
+        display: flex;
+        align-items: center;
+      }
+      .author img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      .author-info {
+        font-size: 0.875em;
+        color: #999;
+      }
+      .share-button {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+      }
+      .share-popup {
+        display: none;
+        position: absolute;
+        bottom: 40px;
+        right: 0;
+        background-color: #333;
+        color: white;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+      .share-popup:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+      }
+      .share-popup span {
+        margin-right: 10px;
+      }
+      .share-popup svg {
+        fill: white;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-12 col-md-5">
+                <img
+                  src="./images/drawers.jpg"
+                  class="card-img"
+                  alt="Furniture Image"
+                />
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="card-content">
+                  <h2>
+                    Shift the overall look and feel by adding these wonderful
+                    touches to furniture in your home
+                  </h2>
+                  <p>
+                    Ever been in a room and felt like something was missing?
+                    Perhaps it felt slightly bare and uninviting. I've got some
+                    simple tips to help you make any room feel complete.
+                  </p>
+                  <div class="row">
+                    <div class="col">
+                      <div class="author">
+                        <img
+                          src="./images/avatar-michelle.jpg"
+                          alt="Author Image"
+                        />
+                        <div class="author-info">
+                          <div>Michelle Appleton</div>
+                          <div>28 Jun 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="share-button">
+                    <svg
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 8a3 3 0 0 0-2.44 1.22l-6.09-3.05a3 3 0 1 0-.17 1.51L15.4 10a3 3 0 1 0 2.57-.36L17.57 11A3 3 0 1 0 18 8z"
+                        fill="#000"
+                        fill-rule="nonzero"
+                      />
+                    </svg>
+                    <div class="share-popup">
+                      <span>SHARE</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 2h-2c-.82 0-1.54.5-1.84 1.22L12 9.24l-2.16-6.02A2.01 2.01 0 0 0 8 2H6c-1.1 0-2 .9-2 2s.9 2 2 2h1.68L10 13.76v6.53c0 1.25 1 2.27 2.24 2.27 1.24 0 2.24-1.02 2.24-2.27v-6.53L17.32 6H18c1.1 0 2-.9 2-2s-.9-2-2-2z"
+                          fill="#FFF"
+                        />
+                      </svg>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 2h-2c-.82 0-1.54.5-1.84 1.22L12 9.24l-2.16-6.02A2.01 2.01 0 0 0 8 2H6c-1.1 0-2 .9-2 2s.9 2 2 2h1.68L10 13.76v6.53c0 1.25 1 2.27 2.24 2.27 1.24 0 2.24-1.02 2.24-2.27v-6.53L17.32 6H18c1.1 0 2-.9 2-2s-.9-2-2-2z"
+                          fill="#FFF"
+                        />
+                      </svg>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 2h-2c-.82 0-1.54.5-1.84 1.22L12 9.24l-2.16-6.02A2.01 2.01 0 0 0 8 2H6c-1.1 0-2 .9-2 2s.9 2 2 2h1.68L10 13.76v6.53c0 1.25 1 2.27 2.24 2.27 1.24 0 2.24-1.02 2.24-2.27v-6.53L17.32 6H18c1.1 0 2-.9 2-2s-.9-2-2-2z"
+                          fill="#FFF"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .querySelector(".share-button")
+        .addEventListener("click", function () {
+          const popup = this.querySelector(".share-popup");
+          popup.style.display =
+            popup.style.display === "block" ? "none" : "block";
+        });
+
+      document.addEventListener("click", function (e) {
+        const shareButton = document.querySelector(".share-button");
+        if (!shareButton.contains(e.target)) {
+          shareButton.querySelector(".share-popup").style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
